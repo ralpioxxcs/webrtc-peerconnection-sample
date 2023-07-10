@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WebRTC  PeerConnection & DataChannel Test</title>
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+  <h1>Data Channel with native WebRTC</h1>
+  <div>
+    <span id="connectStatus"></span>
+  </div>
+  <div>
+    <span id="currentRoom"></span>
+  </div>
+
+  <div>
+    <h1>1. Enter Offer SDP Here</h1>
+    <textarea id="offer-sdp-box" rows=30 cols=50></textarea>
+    <br />
+    <button class="mdc-button mdc-button--raised" id="connectBtn">
+      <i class="material-icons mdc-button__icon" aria-hidden="true">person</i>
+      <span class="mdc-button__label">Connect</span>
+    </button>
+  </div>
+
+  <div>
+    <h1>Enter ICE candidate here</h1>
+    <textarea id="ice-candidates" rows=5 cols=50></textarea><br />
+    <textarea id="ice-candidates-sdp-mid" rows=2 cols=50></textarea><br />
+    <textarea id="ice-candidates-sdp-mline-index" rows=2 cols=50></textarea><br />
+    <br />
+    <button class="mdc-button mdc-button--raised" id="addBtn">
+      <i class="material-icons mdc-button__icon" aria-hidden="true">add</i>
+      <span class="mdc-button__label">Add</span>
+    </button>
+  </div>
+
+  <br />
+  <hr />
+  <br />
+
+  <div>
+    <h1>Enter Message here</h1>
+    <textarea id="message-box" disabled></textarea>
+    <br />
+    <button class="mdc-button mdc-button--raised" disabled id="sendBtn">
+      <i class="material-icons mdc-button__icon" aria-hidden="true" disabled>send</i>
+      <span class="mdc-button__label">Send Message</span>
+    </button>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
